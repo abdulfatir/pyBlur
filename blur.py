@@ -40,7 +40,3 @@ def BlurRect(image, rect, ksize, sigmaX, *args):
 	x,y,w,h = rect
 	contours = [[np.array([[x,y],[x+w,y],[x+w,y+h],[x,y+h]])]]
 	return BlurContours(image, contours, ksize, sigmaX, *args)
-
-img = cv2.imread('in.jpg',1)
-out = BlurRect(img, [0,0,50,60], 57, 10)
-cv2.imwrite('out.png', out)
