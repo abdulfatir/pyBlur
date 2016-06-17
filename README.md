@@ -6,13 +6,13 @@ When a part of an image is blurred, most of the times it is harsh on the eyes. `
 
 ## Documentation 
 
-* pyblur.**BlurRect**(image, rect, ksize, sigmaX [, sigmaY])  
+* `pyblur.**BlurRect**(image, rect, ksize, sigmaX [, sigmaY])`  
 Blurs a rectangular portion of the image defined by a numpy array `rect` which is `[x,y,width,height]`. `ksize`,`sigmaX`, and `sigmaY` mean the same as they mean in `cv2.GaussianBlur`.
-* pyblur.**BlurContours**(image, contours, ksize, sigmaX [, sigmaY])  
+* `pyblur.**BlurContours**(image, contours, ksize, sigmaX [, sigmaY])`  
 Blurs arbitrary polygons defined by the contours. `ksize`,`sigmaX`, and `sigmaY` mean the same as they mean in `cv2.GaussianBlur`.
-* pyblur.**SoftBlurRect**(image, rect, ksize, sigmaX [,sigmaY [,mksize [,msigmaX [,msigmaY]]]], **kwargs)  
+* `pyblur.**SoftBlurRect**(image, rect, ksize, sigmaX [,sigmaY [,mksize [,msigmaX [,msigmaY]]]], **kwargs)`  
 Blurs a rectangular portion of the image defined by a numpy array `rect` which is `[x,y,width,height]` softly such that it blends with the background.`ksize`,`sigmaX`, and `sigmaY` are the parameters used to blur the image once using `cv2.GaussianBlur`.`mksize`,`msigmaX`, and `msigmaY` are the parameters used to blur the mask using `cv2.GaussianBlur` on successive iterations. `iters` can be passed to `kwargs` to set the number of iterations used for soft blurring.
-* pyblur.**SoftBlurContours**(image, contours, ksize, sigmaX [,sigmaY [,mksize [,msigmaX [,msigmaY]]]], **kwargs)  
+* `pyblur.**SoftBlurContours**(image, contours, ksize, sigmaX [,sigmaY [,mksize [,msigmaX [,msigmaY]]]], **kwargs)`  
 Blurs a rectangular portion of the image defined by a numpy array `rect` which is `[x,y,width,height]` softly such that it blends with the background.`ksize`,`sigmaX`, and `sigmaY` are the parameters used to blur the image once using `cv2.GaussianBlur`.`mksize`,`msigmaX`, and `msigmaY` are the parameters used to blur the mask using `cv2.GaussianBlur` on successive iterations. `iters` can be passed to `kwargs` to set the number of iterations used for soft blurring.
 
 
